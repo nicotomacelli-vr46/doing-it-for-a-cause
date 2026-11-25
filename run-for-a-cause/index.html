@@ -488,11 +488,35 @@
       }
     }
 
-    function venmoUrl(item, customAmount) {
-      const user = treeData.venmoUser || 'doingitforacause';
+    function venmoLinks(item, customAmount) {
+      const user   = treeData.venmoUser || 'doingitforacause';
       const amount = customAmount != null ? customAmount : (item.price ? item.price.toFixed(2) : '');
-      const note = encodeURIComponent("Gift for Seattle Children's Hospital – " + item.name);
-      return `https://venmo.com/u/${user}?txn=pay${amount ? '&amount=' + amount : ''}&note=${note}`;
+      const note   = encodeURIComponent("Seattle Children's Hospital – " + item.name + ": " + item.desc);
+      const params = `txn=pay${amount ? '&amount=' + amount : ''}&note=${note}`;
+      return {
+        app: `venmo://paycharge?${params}&recipients=${user}`,
+        web: `https://venmo.com/u/${user}?${params}`
+      };
+    }
+
+    function handleVenmo(el, e) {
+      e.preventDefault();
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (!isMobile) {
+        window.open(el.dataset.web, '_blank', 'noopener');
+        return;
+      }
+      // Cancel the fallback if the app opened (page goes hidden/blurred)
+      const fallback = setTimeout(() => window.open(el.dataset.web, '_blank', 'noopener'), 1500);
+      const cancel = () => {
+        clearTimeout(fallback);
+        document.removeEventListener('visibilitychange', onVisibility);
+        window.removeEventListener('blur', cancel);
+      };
+      const onVisibility = () => { if (document.hidden) cancel(); };
+      document.addEventListener('visibilitychange', onVisibility);
+      window.addEventListener('blur', cancel);
+      window.location = el.dataset.app;
     }
 
     function buildTagEl(item) {
@@ -504,11 +528,15 @@
         ? `<div class="tag-price">$${item.price.toFixed(2)}</div><div class="tag-price-note">est. price incl. tax</div>`
         : `<div class="tag-price" style="font-size:0.88rem;color:#999;">Price TBD</div><div class="tag-price-note">contact us for details</div>`;
 
-      const btnHtml = funded
-        ? `<span class="funded-badge">🎉 Fully Funded — Thank you!</span>`
-        : item.price != null
-          ? `<a class="donate-btn" href="${venmoUrl(item)}" target="_blank" rel="noopener">Donate via Venmo →</a>`
-          : `<a class="donate-btn contact" href="mailto:info@doingitforacause.org?subject=${encodeURIComponent('Gift inquiry: ' + item.name)}">Contact Us for Pricing</a>`;
+      let btnHtml;
+      if (funded) {
+        btnHtml = `<span class="funded-badge">🎉 Fully Funded — Thank you!</span>`;
+      } else if (item.price != null) {
+        const links = venmoLinks(item);
+        btnHtml = `<a class="donate-btn" href="${links.web}" data-app="${links.app}" data-web="${links.web}" onclick="handleVenmo(this,event)" rel="noopener">Donate via Venmo →</a>`;
+      } else {
+        btnHtml = `<a class="donate-btn contact" href="mailto:info@doingitforacause.org?subject=${encodeURIComponent('Gift inquiry: ' + item.name)}">Contact Us for Pricing</a>`;
+      }
 
       const imgHtml = item.image
         ? `<img class="tag-img" src="${item.image}" alt="${item.name}" />`
@@ -584,13 +612,15 @@
         sortLabel.style.display = 'none';
         grid.innerHTML = '';
         const user = treeData.venmoUser || 'doingitforacause';
-        const donateUrl = `https://venmo.com/u/${user}?txn=pay&note=${encodeURIComponent("Open donation for Seattle Children's Hospital")}`;
+        const note = encodeURIComponent("Open donation for Seattle Children's Hospital");
+        const appUrl = `venmo://paycharge?txn=pay&recipients=${user}&note=${note}`;
+        const webUrl = `https://venmo.com/u/${user}?txn=pay&note=${note}`;
         const tile = document.createElement('div');
         tile.className = 'donate-tile';
         tile.innerHTML = `
           <h3>💵 Donate Any Amount</h3>
           <p>Not sure what to pick? Donate any amount you'd like — we'll choose the perfect item from Seattle Children's Hospital's wish list and deliver it on your behalf.</p>
-          <a class="donate-btn" href="${donateUrl}" target="_blank" rel="noopener">Donate via Venmo →</a>
+          <a class="donate-btn" href="${webUrl}" data-app="${appUrl}" data-web="${webUrl}" onclick="handleVenmo(this,event)" rel="noopener">Donate via Venmo →</a>
         `;
         grid.appendChild(tile);
         currentItems = [];
