@@ -25,11 +25,11 @@ upload() {
 }
 
 if [ "$MODE" = "html" ]; then
-  find "$LOCAL_DIR" -name "*.html" | sort | while read -r f; do
+  find "$LOCAL_DIR" -name "*.html" ! -path "*/node_modules/*" ! -path "*/.git/*" | sort | while read -r f; do
     upload "$f"
   done
 else
-  find "$LOCAL_DIR" -type f ! -name "deploy.sh" ! -name ".DS_Store" | sort | while read -r f; do
+  find "$LOCAL_DIR" -type f ! -name "deploy.sh" ! -name ".DS_Store" ! -path "*/node_modules/*" ! -path "*/.git/*" | sort | while read -r f; do
     upload "$f"
   done
 fi

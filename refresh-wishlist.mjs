@@ -55,22 +55,26 @@ for (const url of LISTS) {
       const results = [];
       document.querySelectorAll('[data-id]').forEach(card => {
         const name = card.querySelector('[id^="itemName"]')?.innerText?.trim();
-        const qtyText = card.querySelector('[id^="itemRequested_"]')?.innerText?.trim();
-        const qty = parseInt(qtyText) || null;
+        const needed = parseInt(card.querySelector('[id^="itemRequested_"]')?.innerText?.trim()) || null;
+        const has    = parseInt(card.querySelector('[id^="itemPurchased_"]')?.innerText?.trim()) || 0;
         const cardText = card.innerText || '';
         const available = cardText.includes('Add to Cart') || cardText.includes('Add to cart');
-        if (name) results.push({ name, qty, available });
+        if (name) results.push({ name, needed, has, available });
       });
       return results;
     });
 
     for (const s of scraped) {
-      if (!s.available || !s.qty) continue;
+      if (!s.available || !s.needed) continue;
       const match = findMatch(data, s.name);
       if (match) {
-        if (match.needed !== s.qty) {
-          changes.push(`  ✏️  "${match.name}": ${match.needed} → ${s.qty} needed`);
-          match.needed = s.qty;
+        if (match.needed !== s.needed) {
+          changes.push(`  ✏️  "${match.name}": needed ${match.needed} → ${s.needed}`);
+          match.needed = s.needed;
+        }
+        if (match.claimed !== s.has) {
+          changes.push(`  ✏️  "${match.name}": claimed ${match.claimed} → ${s.has}`);
+          match.claimed = s.has;
         }
       } else {
         notMatched.push(`  ⚠️  No match for: "${s.name.substring(0, 60)}"`);
