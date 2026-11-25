@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skate For a Cause 2026</title>
+  <link rel="icon" href="../difc-logo.png" />
+  <meta property="og:title" content="Skate For a Cause 2026" />
+  <meta property="og:description" content="Join us December 12, 2026 at Lynnwood Ice Center for Skate For a Cause — supporting Seattle Children's Hospital." />
+  <meta property="og:image" content="https://doingitforacause.org/difc-logo.png" />
+  <meta property="og:url" content="https://doingitforacause.org/run-for-a-cause/" />
+  <meta property="og:type" content="website" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f4faff;
+      color: #1a1a1a;
+    }
+
+    /* NAV */
+    nav {
+      background-color: #1a7abf;
+      padding: 14px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #cce8fa;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-family: sans-serif;
+    }
+
+    nav a:hover { color: #fff; }
+
+    /* HERO */
+    .hero {
+      background-color: #3daef5;
+      padding: 70px 40px;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 220px;
+      max-width: 80%;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    /* EVENT DETAILS BAR */
+    .details-bar {
+      background-color: #1a7abf;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 56px;
+      flex-wrap: wrap;
+    }
+
+    .detail-item {
+      text-align: center;
+      color: #fff;
+    }
+
+    .detail-item .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-family: sans-serif;
+      opacity: 0.8;
+    }
+
+    .detail-item .value {
+      font-size: 1.05rem;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+
+    /* SECTIONS */
+    .section {
+      max-width: 860px;
+      margin: 64px auto;
+      padding: 0 40px;
+    }
+
+    .section h2 {
+      font-size: 1.9rem;
+      color: #1a7abf;
+      margin-bottom: 20px;
+      border-bottom: 3px solid #90caf9;
+      padding-bottom: 10px;
+    }
+
+    .section p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    /* HOW IT WORKS */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 28px;
+    }
+
+    .step {
+      background-color: #fff;
+      border: 2px solid #90caf9;
+      border-radius: 14px;
+      padding: 24px 28px;
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    }
+
+    .step-number {
+      background-color: #1a7abf;
+      color: #fff;
+      font-size: 1.1rem;
+      font-weight: bold;
+      font-family: sans-serif;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+
+    .step p {
+      font-size: 1rem;
+      line-height: 1.7;
+      color: #333;
+      margin: 0;
+    }
+
+    /* CHARITY */
+    .charity-card {
+      background-color: #fff;
+      border: 2px solid #90caf9;
+      border-radius: 14px;
+      padding: 36px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      margin-top: 28px;
+    }
+
+    .charity-card h3 {
+      font-size: 1.3rem;
+      color: #1a7abf;
+      margin-bottom: 12px;
+    }
+
+    .charity-card p {
+      font-size: 0.97rem;
+      color: #555;
+      line-height: 1.7;
+      font-family: sans-serif;
+    }
+
+    .charity-link {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: sans-serif;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #1a7abf;
+      text-decoration: none;
+      border-bottom: 2px solid #90caf9;
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .charity-link:hover {
+      color: #0f5a99;
+      border-color: #1a7abf;
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid #c5e0f5;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* REGISTER */
+    .register-section {
+      background-color: #e3f2fd;
+      padding: 64px 40px;
+      text-align: center;
+    }
+
+    .register-section h2 {
+      font-size: 1.9rem;
+      color: #1a7abf;
+      margin-bottom: 12px;
+    }
+
+    .register-section p {
+      font-size: 1.05rem;
+      color: #333;
+      margin-bottom: 28px;
+    }
+
+    .register-btn {
+      display: inline-block;
+      background-color: #1a7abf;
+      color: #fff;
+      font-size: 1rem;
+      font-family: sans-serif;
+      font-weight: bold;
+      padding: 14px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      transition: background-color 0.2s;
+    }
+
+    .register-btn:hover {
+      background-color: #0f5a99;
+    }
+
+    .register-btn.disabled {
+      opacity: 0.6;
+      cursor: default;
+      pointer-events: none;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1a7abf;
+      color: #cce8fa;
+      text-align: center;
+      padding: 24px 40px;
+      font-size: 0.85rem;
+      font-family: sans-serif;
+      margin-top: 80px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Skate For a Cause 2026</div>
+    <a href="../home.html">&larr; Back to Doing It For a Cause</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="../skate-for-a-cause/skate-logo-2026.png" alt="Skate For a Cause 2026 logo" />
+  </div>
+
+  <!-- EVENT DETAILS -->
+  <div class="details-bar">
+    <div class="detail-item">
+      <div class="label">Date</div>
+      <div class="value">Saturday, December 12, 2026</div>
+    </div>
+    <div class="detail-item">
+      <div class="label">Morning Session</div>
+      <div class="value">10:45 - 11:45AM</div>
+    </div>
+    <div class="detail-item">
+      <div class="label">Afternoon Session</div>
+      <div class="value">3 - 4:15PM</div>
+    </div>
+    <div class="detail-item">
+      <div class="label">Location</div>
+      <div class="value">Lynnwood Ice Center</div>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section">
+    <h2>About the Event</h2>
+    <p>Skate For a Cause 2026 is back — and this year we're introducing a <strong>Wish Tree</strong> for Seattle Children's Hospital. Come skate with us and help make a difference for children and families in need this holiday season.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <h2>How the Wish Tree Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <p>At the event, you'll find a <strong>Christmas tree decorated with gift cards</strong>. Each card features a specific item that Seattle Children's Hospital is in need of, along with an image, description, and price tag.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <p><strong>Pick a card</strong> from the tree that speaks to you and bring it to one of our volunteers.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <p><strong>Purchase the tag</strong> at the listed price. We'll take care of buying the item and delivering it directly to Seattle Children's Hospital on your behalf.</p>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- CHARITY -->
+  <div class="section">
+    <h2>Who We're Supporting</h2>
+    <div class="charity-card">
+      <h3>🏥 Seattle Children's Hospital</h3>
+      <p>Seattle Children's Hospital is one of the top children's hospitals in the country, providing care to children across the Pacific Northwest and beyond. Through our Wish Tree, every item purchased goes directly to the hospital to support patients and their families during the holiday season.</p>
+      <a class="charity-link" href="https://www.seattlechildrens.org/" target="_blank">Learn More &rarr;</a>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- REGISTER -->
+  <div class="register-section">
+    <h2>Register</h2>
+    <p>Secure your spot at Skate For a Cause 2026. Registration details below.</p>
+    <a class="register-btn disabled" href="#">Registration Link Coming Soon</a>
+  </div>
+
+  <footer>
+    &copy; 2026 Doing It For a Cause &mdash; All proceeds go directly to our charity partners.
+  </footer>
+
+</body>
+</html>

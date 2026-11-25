@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Skate For a Cause 2025</title>
+  <link rel="icon" href="../difc-logo.png" />
+  <meta property="og:title" content="Skate For a Cause 2025" />
+  <meta property="og:description" content="A community skating event supporting Clothes for Kids, Paws Companion Animal Shelter, and the Lynnwood Food Bank." />
+  <meta property="og:image" content="https://doingitforacause.org/difc-logo.png" />
+  <meta property="og:url" content="https://doingitforacause.org/skate-for-a-cause/" />
+  <meta property="og:type" content="website" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background-color: #f4faff;
+      color: #1a1a1a;
+    }
+
+    /* NAV */
+    nav {
+      background-color: #1a7abf;
+      padding: 14px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo {
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: #cce8fa;
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-family: sans-serif;
+    }
+
+    nav a:hover { color: #fff; }
+
+    /* HERO */
+    .hero {
+      background-color: #3daef5;
+      padding: 70px 40px;
+      text-align: center;
+    }
+
+    .hero img {
+      width: 220px;
+      max-width: 80%;
+      border-radius: 50%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+    }
+
+    /* EVENT DETAILS BAR */
+    .details-bar {
+      background-color: #1a7abf;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: center;
+      gap: 56px;
+      flex-wrap: wrap;
+    }
+
+    .detail-item {
+      text-align: center;
+      color: #fff;
+    }
+
+    .detail-item .label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      font-family: sans-serif;
+      opacity: 0.8;
+    }
+
+    .detail-item .value {
+      font-size: 1.05rem;
+      font-weight: bold;
+      margin-top: 4px;
+    }
+
+    /* IMPACT SUMMARY */
+    .impact {
+      max-width: 800px;
+      margin: 64px auto;
+      padding: 0 40px;
+      text-align: center;
+    }
+
+    .impact h2 {
+      font-size: 1.9rem;
+      color: #1a7abf;
+      margin-bottom: 16px;
+    }
+
+    .impact p {
+      font-size: 1.05rem;
+      line-height: 1.8;
+      color: #333;
+    }
+
+    .impact-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 36px;
+      flex-wrap: wrap;
+    }
+
+    .stat-box {
+      background-color: #3daef5;
+      color: #fff;
+      border-radius: 14px;
+      padding: 28px 36px;
+      min-width: 160px;
+    }
+
+    .stat-box .stat-number {
+      font-size: 2.2rem;
+      font-weight: bold;
+      line-height: 1;
+    }
+
+    .stat-box .stat-label {
+      font-size: 0.85rem;
+      font-family: sans-serif;
+      margin-top: 6px;
+      opacity: 0.9;
+    }
+
+    /* DIVIDER */
+    .divider {
+      border: none;
+      border-top: 1px solid #c5e0f5;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* DONATIONS SECTION */
+    .donations {
+      max-width: 860px;
+      margin: 64px auto;
+      padding: 0 40px;
+    }
+
+    .donations > h2 {
+      font-size: 1.9rem;
+      color: #1a7abf;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .charity-card {
+      background-color: #fff;
+      border: 2px solid #a8d8f5;
+      border-radius: 14px;
+      padding: 36px;
+      margin-bottom: 24px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+    }
+
+    .charity-card h3 {
+      font-size: 1.3rem;
+      color: #1a7abf;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .charity-card .donation-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .donation-pill {
+      background-color: #e8f5fe;
+      border: 1px solid #a8d8f5;
+      border-radius: 50px;
+      padding: 8px 18px;
+      font-family: sans-serif;
+      font-size: 0.9rem;
+      color: #1a7abf;
+      font-weight: bold;
+    }
+
+    .donation-pill.money {
+      background-color: #d4f0e0;
+      border-color: #7fcca0;
+      color: #1a6b3a;
+    }
+
+    .charity-link {
+      display: inline-block;
+      margin-top: 16px;
+      font-family: sans-serif;
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #1a7abf;
+      text-decoration: none;
+      border-bottom: 2px solid #a8d8f5;
+      padding-bottom: 2px;
+      transition: color 0.2s, border-color 0.2s;
+    }
+
+    .charity-link:hover {
+      color: #0f5a99;
+      border-color: #1a7abf;
+    }
+
+    .charity-card p {
+      font-size: 0.97rem;
+      color: #555;
+      line-height: 1.7;
+      font-family: sans-serif;
+      margin-top: 14px;
+    }
+
+    /* PHOTOS */
+    .photos-section {
+      padding: 64px 40px;
+    }
+
+    .photos-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    .photos-inner h2 {
+      font-size: 1.9rem;
+      color: #1a7abf;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .photos-credit {
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 0.85rem;
+      color: #888;
+      margin-bottom: 32px;
+      font-style: italic;
+    }
+
+    .volunteer-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .volunteer-grid img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .event-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+    }
+
+    .event-grid img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+
+    .event-grid img:hover {
+      transform: scale(1.02);
+    }
+
+    @media (max-width: 700px) {
+      .volunteer-grid,
+      .event-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    /* SHOUTOUTS */
+    .shoutouts {
+      background-color: #e8f5fe;
+      padding: 64px 40px;
+    }
+
+    .shoutouts-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .shoutouts h2 {
+      font-size: 1.9rem;
+      color: #1a7abf;
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .shoutout-item {
+      background-color: #fff;
+      border-left: 4px solid #3daef5;
+      border-radius: 0 10px 10px 0;
+      padding: 20px 24px;
+      margin-bottom: 16px;
+      box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+    }
+
+    .shoutout-item h4 {
+      font-size: 1rem;
+      color: #1a7abf;
+      margin-bottom: 6px;
+    }
+
+    .shoutout-item p {
+      font-size: 0.93rem;
+      color: #555;
+      line-height: 1.6;
+      font-family: sans-serif;
+    }
+
+    /* FOOTER */
+    footer {
+      background-color: #1a7abf;
+      color: #cce8fa;
+      text-align: center;
+      padding: 24px 40px;
+      font-size: 0.85rem;
+      font-family: sans-serif;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Skate For a Cause</div>
+    <a href="../home.html">&larr; Back to Doing It For a Cause</a>
+  </nav>
+
+  <!-- HERO -->
+  <div class="hero">
+    <img src="skate-logo.png" alt="Skate For a Cause logo" />
+  </div>
+
+  <!-- EVENT DETAILS -->
+  <div class="details-bar">
+    <div class="detail-item">
+      <div class="label">Date</div>
+      <div class="value">Saturday, November 29, 2025</div>
+    </div>
+    <div class="detail-item">
+      <div class="label">Time</div>
+      <div class="value">3:00 PM &ndash; 4:15 PM</div>
+    </div>
+    <div class="detail-item">
+      <div class="label">Location</div>
+      <div class="value">Lynnwood Ice Center</div>
+    </div>
+  </div>
+
+  <!-- IMPACT -->
+  <div class="impact">
+    <h2>Our Impact</h2>
+    <p>Thanks to the generosity of our community, Skate For a Cause was an incredible success. Together we raised over $2,000 in monetary donations and collected 8 large bins of physical donations — all distributed across three local organizations in need.</p>
+    <div class="impact-stats">
+      <div class="stat-box">
+        <div class="stat-number">$2,000+</div>
+        <div class="stat-label">Monetary Donations Raised</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">8</div>
+        <div class="stat-label">Large Bins of Physical Donations</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Organizations Supported</div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- DONATIONS -->
+  <div class="donations">
+    <h2>Where We Donated</h2>
+
+    <div class="charity-card">
+      <h3>👗 Clothes for Kids</h3>
+      <div class="donation-row">
+        <div class="donation-pill money">$655 Monetary Donation</div>
+        <div class="donation-pill">5 Large Bins</div>
+      </div>
+      <p>We donated five large bins filled with clothes, stuffed animals, and diapers to help provide essential items for children in need.</p>
+      <a class="charity-link" href="https://clothesforkids.org/" target="_blank">Learn More &amp; Donate &rarr;</a>
+    </div>
+
+    <div class="charity-card">
+      <h3>🐾 Paws Companion Animal Shelter</h3>
+      <div class="donation-row">
+        <div class="donation-pill money">$655 Monetary Donation</div>
+        <div class="donation-pill">1 Large Bin</div>
+      </div>
+      <p>We donated one large bin packed with food, toys, leashes, collars, dog beds, and more to support the animals at Paws Companion Animal Shelter.</p>
+      <a class="charity-link" href="https://www.paws.org/" target="_blank">Learn More &amp; Donate &rarr;</a>
+    </div>
+
+    <div class="charity-card">
+      <h3>🥫 Lynnwood Food Bank</h3>
+      <div class="donation-row">
+        <div class="donation-pill money">$675 Monetary Donation</div>
+        <div class="donation-pill">2 Large Bins</div>
+      </div>
+      <p>We donated two large bins filled with a variety of food items to help stock the shelves at the Lynnwood Food Bank for families in our community.</p>
+      <a class="charity-link" href="https://www.lynnwoodfoodbank.org/" target="_blank">Learn More &amp; Donate &rarr;</a>
+    </div>
+
+  </div>
+
+  <hr class="divider" />
+
+  <!-- VOLUNTEERS -->
+  <div class="photos-section">
+    <div class="photos-inner">
+      <h2>Our Volunteers</h2>
+      <div class="volunteer-grid">
+        <img src="volunteer-1.jpg" alt="Volunteers at Skate For a Cause" />
+        <img src="volunteer-2.jpg" alt="Volunteers at Skate For a Cause" />
+        <img src="volunteer-3.jpg" alt="Volunteers at Skate For a Cause" />
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- EVENT PHOTOS -->
+  <div class="photos-section">
+    <div class="photos-inner">
+      <h2>Event Photos</h2>
+      <p class="photos-credit">Photography by Gina Rensberger</p>
+      <div class="event-grid">
+        <img src="event-1.jpg" alt="Skate For a Cause event" />
+        <img src="event-2.jpg" alt="Skate For a Cause event" />
+        <img src="event-3.jpg" alt="Skate For a Cause event" />
+        <img src="event-4.jpg" alt="Skate For a Cause event" />
+        <img src="event-5.jpg" alt="Skate For a Cause event" />
+        <img src="event-6.jpg" alt="Skate For a Cause event" />
+        <img src="event-7.jpg" alt="Skate For a Cause event" />
+        <img src="event-8.jpg" alt="Skate For a Cause event" />
+        <img src="event-9.jpg" alt="Skate For a Cause event" />
+        <img src="event-10.jpg" alt="Skate For a Cause event" />
+      </div>
+    </div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- SHOUTOUTS -->
+  <div class="shoutouts">
+    <div class="shoutouts-inner">
+      <h2>Special Thanks</h2>
+
+      <div class="shoutout-item">
+        <h4>Lynnwood Ice Center</h4>
+        <p>Donated roughly 80% of all profits directly to our charities and graciously allowed us to host the event at their facility. None of this would have been possible without them.</p>
+      </div>
+
+      <div class="shoutout-item">
+        <h4>Seattle Red Hawks &mdash; U18 A1</h4>
+        <p>A huge thank you to the U18 A1 Red Hawks for volunteering their time at the event and helping make the day run smoothly.</p>
+      </div>
+
+      <div class="shoutout-item">
+        <h4>Gina Rensberger &mdash; Photographer</h4>
+        <p>Thank you to Gina Rensberger for capturing all the wonderful moments from the event.</p>
+      </div>
+
+      <div class="shoutout-item">
+        <h4>Jessica Campbell &mdash; Assistant Coach, Seattle Kraken</h4>
+        <p>Thank you to Jessica Campbell for her generous donation to our raffle bins.</p>
+      </div>
+
+      <div class="shoutout-item">
+        <h4>GLDN Collective &mdash; Seattle</h4>
+        <p>Thank you to GLDN Collective for connecting us with Jessica Campbell and helping make that partnership possible.</p>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 Doing It For a Cause &mdash; All proceeds go directly to our charity partners.
+  </footer>
+
+</body>
+</html>
