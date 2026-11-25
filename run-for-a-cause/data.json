@@ -1,0 +1,712 @@
+{
+  "lastUpdated": "2026-11-24T00:00:00Z",
+  "venmoUser": "doingitforacause",
+  "groups": [
+    {
+      "id": "toys",
+      "icon": "🧸",
+      "name": "Toys & Games",
+      "items": [
+        {
+          "id": "dc1",
+          "name": "DC Super Friends & Villains Pack",
+          "desc": "Fisher-Price Imaginext set with heroes and villains figures",
+          "price": 27.5,
+          "needed": 10,
+          "claimed": 0,
+          "amazonKey": "Fisher-Price Imaginext DC Super Friends Villains",
+          "image": "images/dc1.jpg"
+        },
+        {
+          "id": "dc2",
+          "name": "DC Super Friends Deluxe Figure Pack",
+          "desc": "Imaginext deluxe superhero figure collection",
+          "price": 27.49,
+          "needed": 10,
+          "claimed": 0,
+          "amazonKey": "Imaginext DC Super Friends Deluxe Figure Pack",
+          "image": "images/dc2.jpg"
+        },
+        {
+          "id": "zoo",
+          "name": "Mini Zoo Plush Animal Set (25 Pieces)",
+          "desc": "Stuffed zoo & safari animals set",
+          "price": 50.2,
+          "needed": 10,
+          "claimed": 0,
+          "amazonKey": "Fun Express Mini Zoo Plush Animal Set",
+          "image": "images/zoo.jpg"
+        },
+        {
+          "id": "busy",
+          "name": "Montessori Busy Board",
+          "desc": "Sensory activity board for toddlers ages 1–3",
+          "price": 16.49,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Busy Board for Toddlers Montessori",
+          "image": "images/busy.jpg"
+        },
+        {
+          "id": "puzzles",
+          "name": "Wooden Peg Puzzles — Set of 4",
+          "desc": "Farm, Dinosaur, Fruit & Marine Animals themes for ages 1–3",
+          "price": 9.78,
+          "needed": 50,
+          "claimed": 0,
+          "amazonKey": "Wooden Peg Puzzles for Toddlers",
+          "image": "images/puzzles.jpg"
+        },
+        {
+          "id": "marvel",
+          "name": "Marvel Titan Hero Action Figures 6-Pack",
+          "desc": "12-inch superhero action figures set, ages 4+",
+          "price": 43.33,
+          "needed": 50,
+          "claimed": 0,
+          "amazonKey": "Marvel Titan Hero Series Action Figure",
+          "image": "images/marvel.jpg"
+        },
+        {
+          "id": "lego-fox",
+          "name": "LEGO Creator 3-in-1 Red Fox",
+          "desc": "Build a fox, bird, or fish — LEGO Creator set for ages 8+",
+          "price": 38.49,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "LEGO Creator 3 in 1 Forest Animals",
+          "image": "images/lego-fox.jpg"
+        },
+        {
+          "id": "lego-atat",
+          "name": "LEGO Star Wars Gingerbread AT-AT",
+          "desc": "Festive holiday LEGO Star Wars build, ages 10+",
+          "price": 54.44,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "LEGO Star Wars Gingerbread AT-AT Walker",
+          "image": "images/lego-atat.jpg"
+        },
+        {
+          "id": "lego-lilies",
+          "name": "LEGO Botanicals Water Lilies",
+          "desc": "Decorative water lily building set, ages 9+",
+          "price": 26.39,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "LEGO Botanicals Water Lilies 11511",
+          "image": "images/lego-lilies.jpg"
+        },
+        {
+          "id": "bratz",
+          "name": "Bratz Wintertime Wonderland Blind Box",
+          "desc": "Plush blind box with charm clip, holiday series",
+          "price": 27.47,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Bratz Bratziez Wintertime Wonderland",
+          "image": "images/bratz.jpg"
+        },
+        {
+          "id": "hello-kitty",
+          "name": "Hello Kitty Blind Box Fuzzy Series",
+          "desc": "Kuromi, My Melody, Cinnamoroll mystery character",
+          "price": 25.29,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Hello Kitty Blind Box Fuzzy Series",
+          "image": "images/hello-kitty.jpg"
+        },
+        {
+          "id": "foosball",
+          "name": "Saycker Tabletop Foosball Game",
+          "desc": "Mini wooden football table soccer game for all ages",
+          "price": 29.69,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Saycker Table Foosball",
+          "image": "images/foosball.jpg"
+        },
+        {
+          "id": "spirit-island",
+          "name": "Spirit Island Strategy Board Game",
+          "desc": "Expert-level cooperative strategy game, 1–4 players, ages 13+",
+          "price": 49.49,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Greater Than Games Spirit Island",
+          "image": "images/spirit-island.jpg"
+        }
+      ]
+    },
+    {
+      "id": "baby",
+      "icon": "👶",
+      "name": "Baby & Infant",
+      "items": [
+        {
+          "id": "night-light",
+          "name": "EASZZZ Baby Night Light",
+          "desc": "Flip design touch lamp for nursery, portable and rechargeable",
+          "price": 28.04,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "EASZZZ Baby Night Light",
+          "image": "images/night-light.jpg"
+        },
+        {
+          "id": "swaddle",
+          "name": "aden + anais Cotton Muslin Swaddle",
+          "desc": "Breathable baby blanket, ideal for newborns",
+          "price": 43.95,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "aden anais Essentials Cotton Muslin",
+          "image": "images/swaddle.jpg"
+        },
+        {
+          "id": "pacifiers",
+          "name": "MAM Baby Pacifiers 4-Pack (0–3 Months)",
+          "desc": "Skin-soft silicone pacifiers for newborns",
+          "price": 12.68,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "MAM Original Start Baby Pacifiers",
+          "image": "images/pacifiers.jpg"
+        },
+        {
+          "id": "swaddle-knit",
+          "name": "XMWEALTHY Newborn Knit Swaddle Wrap",
+          "desc": "Soft knit wrap blanket bag for receiving newborns",
+          "price": 27.49,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "XMWEALTHY Newborn Baby Wrap Swaddle",
+          "image": "images/swaddle-knit.jpg"
+        },
+        {
+          "id": "baby-mat",
+          "name": "Joryuek Baby Play Mat with Piano",
+          "desc": "Tummy time mat with music and lights, activity gym",
+          "price": 31.17,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Joryuek Baby Play Mat",
+          "image": "images/baby-mat.jpg"
+        },
+        {
+          "id": "otter",
+          "name": "Fisher-Price Soothe 'n Snuggle Otter",
+          "desc": "Portable plush sound machine with breathing motion, calms baby",
+          "price": 38.58,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Fisher-Price Soothe n Snuggle Otter",
+          "image": "images/otter.jpg"
+        },
+        {
+          "id": "baby-sensory",
+          "name": "hahaland Baby Montessori Toys (6–12 Months)",
+          "desc": "6-piece sensory toy set for infant development",
+          "price": 28.59,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "hahaland Baby Toys 6-12 Months",
+          "image": "images/baby-sensory.jpg"
+        },
+        {
+          "id": "baby-contrast",
+          "name": "Joyreal High Contrast Baby Sensory Toys",
+          "desc": "Black and white newborn sensory toy set for visual development",
+          "price": 22.56,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Joyreal High Contrast Baby Toys",
+          "image": "images/baby-contrast.jpg"
+        }
+      ]
+    },
+    {
+      "id": "creative",
+      "icon": "🎨",
+      "name": "Arts & Creative",
+      "items": [
+        {
+          "id": "journal",
+          "name": "Wreck This Journal: Now in Color",
+          "desc": "Creative activity journal for kids, teens & adults",
+          "price": 16.4,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Wreck This Journal Now in Color",
+          "image": "images/journal.jpg"
+        },
+        {
+          "id": "diamond",
+          "name": "Diamond Art Kits — 3-Pack",
+          "desc": "Mountain landscape diamond painting kits, 11.8×15.7\"",
+          "price": 14.38,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Diamond Art Kits for Adults",
+          "image": "images/diamond.jpg"
+        },
+        {
+          "id": "bored-book",
+          "name": "OMG I'm So Bored! Activity Book for Teens",
+          "desc": "100 games and activities for ages 12–17",
+          "price": 10.99,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "OMG Im So Bored The Activity Book",
+          "image": "images/bored-book.jpg"
+        }
+      ]
+    },
+    {
+      "id": "electronics",
+      "icon": "🎧",
+      "name": "Electronics & Gaming",
+      "items": [
+        {
+          "id": "headphones",
+          "name": "Sony WH-CH520 Wireless Headphones",
+          "desc": "Bluetooth on-ear headphones, up to 50hr battery, multipoint connection",
+          "price": null,
+          "needed": 10,
+          "claimed": 0,
+          "amazonKey": "Sony WH-CH520 Wireless",
+          "image": "images/headphones.jpg"
+        },
+        {
+          "id": "gaming",
+          "name": "Gaming Lap Desk Pillow",
+          "desc": "Arm support pillow for console & handheld gaming",
+          "price": 51.69,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Moginno Gaming Pillow Lap Desk",
+          "image": "images/gaming.jpg"
+        },
+        {
+          "id": "govee-led",
+          "name": "Govee RGBIC LED Strip Lights 16.4ft",
+          "desc": "App-controlled color-changing LED lights for bedroom",
+          "price": 10.99,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Govee 16.4ft RGBIC LED Strip Lights",
+          "image": "images/govee-led.jpg"
+        },
+        {
+          "id": "usb-adapter",
+          "name": "USB Wall Adapter 10-Pack",
+          "desc": "Single-port 5V USB charger blocks, universal compatibility",
+          "price": 19.79,
+          "needed": 10,
+          "claimed": 0,
+          "amazonKey": "Wall Adapter 10 Pack",
+          "image": "images/usb-adapter.jpg"
+        },
+        {
+          "id": "usb-cables",
+          "name": "Micro USB Cables 4-Pack (6ft)",
+          "desc": "Android USB 2.0 charging and sync cables",
+          "price": 10.99,
+          "needed": 15,
+          "claimed": 0,
+          "amazonKey": "Micro USB Cables 4Pack",
+          "image": "images/usb-cables.jpg"
+        }
+      ]
+    },
+    {
+      "id": "beauty",
+      "icon": "💄",
+      "name": "Beauty & Wellness",
+      "items": [
+        {
+          "id": "mirror",
+          "name": "HUONUL Magnifying Vanity Mirror with LED",
+          "desc": "Trifold 2×/3×/10× makeup mirror with light",
+          "price": 26.11,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "HUONUL 2X3X10X Magnifying Vanity Mirror",
+          "image": "images/mirror.jpg"
+        },
+        {
+          "id": "nail-pens",
+          "name": "GELLAKTIK Nail Art Pens — 12 Colors",
+          "desc": "0.7mm 3D nail polish pens for detailed nail art",
+          "price": 9.89,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "GELLAKTIK Nail Art Pens",
+          "image": "images/nail-pens.jpg"
+        },
+        {
+          "id": "scrunchies",
+          "name": "KECUCO Satin Scrunchies 30-Pack",
+          "desc": "Small satin scrunchies in multicolor for all hair types",
+          "price": 7.69,
+          "needed": 15,
+          "claimed": 0,
+          "amazonKey": "KECUCO 30Pcs Small Satin Scrunchies",
+          "image": "images/scrunchies.jpg"
+        },
+        {
+          "id": "bonnet",
+          "name": "Evolve Satin Wide Edge Bonnet",
+          "desc": "Satin bonnet that protects hair while sleeping",
+          "price": 5.49,
+          "needed": 25,
+          "claimed": 0,
+          "amazonKey": "Evolve Evolve Satin Wide Edge Bonnet",
+          "image": "images/bonnet.jpg"
+        },
+        {
+          "id": "beauty-scarf",
+          "name": "Evolve Satin Wrap Scarf",
+          "desc": "Satin hair wrap that prevents breakage and frizz",
+          "price": 5.38,
+          "needed": 25,
+          "claimed": 0,
+          "amazonKey": "Evolve Satin Wrap Scarf",
+          "image": "images/beauty-scarf.jpg"
+        }
+      ]
+    },
+    {
+      "id": "spa",
+      "icon": "🧖",
+      "name": "Spa & Gifts",
+      "items": [
+        {
+          "id": "spa-men",
+          "name": "Men's Cedar & Bergamot Spa Kit",
+          "desc": "Bath gift set with soaps, scrubs & grooming essentials",
+          "price": 42.89,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Bath Gifts for Men Dad Birthday Gifts Spa Kit Cedar",
+          "image": "images/spa-men.jpg"
+        }
+      ]
+    },
+    {
+      "id": "clothing",
+      "icon": "👕",
+      "name": "Clothing & Comfort",
+      "items": [
+        {
+          "id": "mpj-sm",
+          "name": "Men's Henley Pajama Set — S/M",
+          "desc": "Soft, breathable short-sleeve pajamas with pockets",
+          "price": 14.01,
+          "needed": 5,
+          "claimed": 0,
+          "amazonKey": "NUOKESASI Mens Henley Pajama sm",
+          "image": "images/mpj-sm.jpg"
+        },
+        {
+          "id": "mpj-ml",
+          "name": "Men's Henley Pajama Set — M/L",
+          "desc": "Soft, breathable short-sleeve pajamas with pockets",
+          "price": 14.01,
+          "needed": 5,
+          "claimed": 0,
+          "amazonKey": "NUOKESASI Mens Henley Pajama ml",
+          "image": "images/mpj-ml.jpg"
+        },
+        {
+          "id": "mpj-lxl",
+          "name": "Men's Henley Pajama Set — L/XL",
+          "desc": "Soft, breathable short-sleeve pajamas with pockets",
+          "price": 15.65,
+          "needed": 5,
+          "claimed": 0,
+          "amazonKey": "NUOKESASI Mens Henley Pajama lxl",
+          "image": "images/mpj-lxl.jpg"
+        },
+        {
+          "id": "mpj-xl2xl",
+          "name": "Men's Henley Pajama Set — XL/2XL",
+          "desc": "Soft, breathable short-sleeve pajamas with pockets",
+          "price": 15.66,
+          "needed": 3,
+          "claimed": 0,
+          "amazonKey": "NUOKESASI Mens Henley Pajama xl2xl",
+          "image": "images/mpj-xl2xl.jpg"
+        },
+        {
+          "id": "wpj-s",
+          "name": "Women's Pajama 2-Pack — S",
+          "desc": "Printed V-neck top & elastic waist pants with pockets",
+          "price": 30.2,
+          "needed": 5,
+          "claimed": 0,
+          "amazonKey": "Ekouaer 2 Pack Womens Pajama s",
+          "image": "images/wpj-s.jpg"
+        },
+        {
+          "id": "wpj-m",
+          "name": "Women's Pajama 2-Pack — M",
+          "desc": "Printed V-neck top & elastic waist pants with pockets",
+          "price": 30.37,
+          "needed": 5,
+          "claimed": 0,
+          "amazonKey": "Ekouaer 2 Pack Womens Pajama m",
+          "image": "images/wpj-m.jpg"
+        },
+        {
+          "id": "wpj-l",
+          "name": "Women's Pajama 2-Pack — L",
+          "desc": "Printed V-neck top & elastic waist pants with pockets",
+          "price": 31.34,
+          "needed": 5,
+          "claimed": 0,
+          "amazonKey": "Ekouaer 2 Pack Womens Pajama l",
+          "image": "images/wpj-l.jpg"
+        },
+        {
+          "id": "wpj-xl",
+          "name": "Women's Pajama 2-Pack — XL",
+          "desc": "Printed V-neck top & elastic waist pants with pockets",
+          "price": 31.34,
+          "needed": 5,
+          "claimed": 0,
+          "amazonKey": "Ekouaer 2 Pack Womens Pajama xl",
+          "image": "images/wpj-xl.jpg"
+        },
+        {
+          "id": "tee-m",
+          "name": "Men's Crew Tee Undershirts — M",
+          "desc": "Moisture-wicking, tag-free multi-pack undershirts",
+          "price": 37.71,
+          "needed": 4,
+          "claimed": 0,
+          "amazonKey": "Fruit of The Loom Mens Crew Tee m",
+          "image": "images/tee-m.jpg"
+        },
+        {
+          "id": "tee-l",
+          "name": "Men's Crew Tee Undershirts — L",
+          "desc": "Moisture-wicking, tag-free multi-pack undershirts",
+          "price": 40.17,
+          "needed": 4,
+          "claimed": 0,
+          "amazonKey": "Fruit of The Loom Mens Crew Tee l",
+          "image": "images/tee-l.jpg"
+        },
+        {
+          "id": "womens-tee-s",
+          "name": "Women's Oversized T-Shirts 5-Pack — S",
+          "desc": "Kinglaman workout short-sleeve summer tops",
+          "price": 34.58,
+          "needed": 4,
+          "claimed": 0,
+          "amazonKey": "Kinglaman 5 Pack Womens Oversized T Shirts s",
+          "image": "images/womens-tee-s.jpg"
+        },
+        {
+          "id": "womens-tee-m",
+          "name": "Women's Oversized T-Shirts 5-Pack — M",
+          "desc": "Kinglaman workout short-sleeve summer tops",
+          "price": 34.58,
+          "needed": 4,
+          "claimed": 0,
+          "amazonKey": "Kinglaman 5 Pack Womens Oversized T Shirts m",
+          "image": "images/womens-tee-m.jpg"
+        },
+        {
+          "id": "womens-tee-l",
+          "name": "Women's Oversized T-Shirts 5-Pack — L",
+          "desc": "Kinglaman workout short-sleeve summer tops",
+          "price": 34.58,
+          "needed": 4,
+          "claimed": 0,
+          "amazonKey": "Kinglaman 5 Pack Womens Oversized T Shirts l",
+          "image": "images/womens-tee-l.jpg"
+        },
+        {
+          "id": "mens-sweat-m",
+          "name": "Men's Dri-Power Fleece Sweatshirt — M",
+          "desc": "Russell Athletic moisture-wicking cotton blend sweatshirt",
+          "price": 20.09,
+          "needed": 8,
+          "claimed": 0,
+          "amazonKey": "Russell Athletic Mens Dri-Power Fleece m",
+          "image": "images/mens-sweat-m.jpg"
+        },
+        {
+          "id": "mens-sweat-l",
+          "name": "Men's Dri-Power Fleece Sweatshirt — L",
+          "desc": "Russell Athletic moisture-wicking cotton blend sweatshirt",
+          "price": 20.09,
+          "needed": 10,
+          "claimed": 0,
+          "amazonKey": "Russell Athletic Mens Dri-Power Fleece l",
+          "image": "images/mens-sweat-l.jpg"
+        },
+        {
+          "id": "mens-sweat-xl",
+          "name": "Men's Dri-Power Fleece Sweatshirt — XL",
+          "desc": "Russell Athletic moisture-wicking cotton blend sweatshirt",
+          "price": 20.09,
+          "needed": 10,
+          "claimed": 0,
+          "amazonKey": "Russell Athletic Mens Dri-Power Fleece xl",
+          "image": "images/mens-sweat-xl.jpg"
+        },
+        {
+          "id": "mens-sweat-2xl",
+          "name": "Men's Dri-Power Fleece Sweatshirt — 2XL",
+          "desc": "Russell Athletic moisture-wicking cotton blend sweatshirt",
+          "price": 20.09,
+          "needed": 10,
+          "claimed": 0,
+          "amazonKey": "Russell Athletic Mens Dri-Power Fleece 2xl",
+          "image": "images/mens-sweat-2xl.jpg"
+        },
+        {
+          "id": "nike-slides",
+          "name": "Nike Men's Calm 2.0 Slides",
+          "desc": "Cushioned foam slides for everyday comfort",
+          "price": 45.38,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Nike Mens Calm 2.0 Slides",
+          "image": "images/nike-slides.jpg"
+        },
+        {
+          "id": "owala",
+          "name": "Owala FreeSip Water Bottle 24oz",
+          "desc": "Stainless steel insulated bottle with 2-in-1 sip or swig lid",
+          "price": 32.99,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Owala FreeSip Stainless Steel",
+          "image": "images/owala.jpg"
+        },
+        {
+          "id": "crossbody",
+          "name": "adidas Core Festival Crossbody Bag",
+          "desc": "Adjustable strap shoulder bag with secure zip pocket",
+          "price": 26.33,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "adidas Core Festival Crossbody",
+          "image": "images/crossbody.jpg"
+        }
+      ]
+    },
+    {
+      "id": "hygiene",
+      "icon": "🧴",
+      "name": "Hygiene & Essentials",
+      "items": [
+        {
+          "id": "toothbrushes",
+          "name": "Colgate Toothbrushes 12-Pack",
+          "desc": "Premier Extra Clean toothbrushes, medium bristle",
+          "price": 10.99,
+          "needed": 25,
+          "claimed": 0,
+          "amazonKey": "Colgate Toothbrushes Premier Extra Clean",
+          "image": "images/toothbrushes.jpg"
+        },
+        {
+          "id": "floss",
+          "name": "EasyHonor Dental Floss Picks 100-Pack",
+          "desc": "Individually wrapped interdental flossers",
+          "price": 8.79,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "EasyHonor Dental Floss Picks",
+          "image": "images/floss.jpg"
+        },
+        {
+          "id": "hair-ties",
+          "name": "Goody Ouchless Hair Ties 50-Pack",
+          "desc": "Assorted neutral 2mm rubber band hair ties",
+          "price": 3.45,
+          "needed": 25,
+          "claimed": 0,
+          "amazonKey": "Goody Ouchless Elastic Hair Ties",
+          "image": "images/hair-ties.jpg"
+        },
+        {
+          "id": "combs",
+          "name": "Meanplan Wide Tooth Combs 21-Pack",
+          "desc": "Long tooth detangling combs for curly and wet hair",
+          "price": 16.49,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "Meanplan 21 Pack Wide Tooth Comb",
+          "image": "images/combs.jpg"
+        },
+        {
+          "id": "shampoo",
+          "name": "ECO amenities Travel Shampoo Bulk (72ct)",
+          "desc": "Hotel-size hydrating shampoo, Green Tea scent, 72 bottles",
+          "price": 29.69,
+          "needed": 25,
+          "claimed": 0,
+          "amazonKey": "ECO amenities Hotel Travel Shampoo",
+          "image": "images/shampoo.jpg"
+        },
+        {
+          "id": "conditioner",
+          "name": "ECO amenities Travel Conditioner Bulk (72ct)",
+          "desc": "Hotel-size hydrating conditioner, Green Tea scent, 72 bottles",
+          "price": 38.49,
+          "needed": 25,
+          "claimed": 0,
+          "amazonKey": "ECO amenities Hotel Conditioner Bulk",
+          "image": "images/conditioner.jpg"
+        },
+        {
+          "id": "body-lotion",
+          "name": "ECO amenities Travel Body Lotion (72ct)",
+          "desc": "Hotel-size hydrating lotion, Green Tea scent, 72 bottles",
+          "price": 37.39,
+          "needed": 25,
+          "claimed": 0,
+          "amazonKey": "ECO amenities Bulk Body Lotion",
+          "image": "images/body-lotion.jpg"
+        },
+        {
+          "id": "body-wash",
+          "name": "BERGMAN KELLY Travel Body Wash 100-Pack",
+          "desc": "1 fl oz travel-size body wash, Tropical Waterfall scent",
+          "price": 36.29,
+          "needed": 20,
+          "claimed": 0,
+          "amazonKey": "BERGMAN KELLY Travel Size Body Wash",
+          "image": "images/body-wash.jpg"
+        },
+        {
+          "id": "fem-pads",
+          "name": "Always Maxi Pads Regular (Size 1)",
+          "desc": "Feminine pads without wings, regular absorbency",
+          "price": 6.90,
+          "needed": 25,
+          "claimed": 0,
+          "amazonKey": "Always Maxi Feminine Pads Without",
+          "image": "images/fem-pads.jpg"
+        },
+        {
+          "id": "laundry-bags",
+          "name": "Mesh Laundry Bags 20-Pack (20×24\")",
+          "desc": "Heavy duty mesh bags with drawstring, white",
+          "price": 35.19,
+          "needed": 10,
+          "claimed": 0,
+          "amazonKey": "20 Pcs Mesh Laundry Bags Bulk",
+          "image": "images/laundry-bags.jpg"
+        }
+      ]
+    }
+  ]
+}
