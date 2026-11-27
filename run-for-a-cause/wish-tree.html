@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wish Tree — Skate For a Cause 2026</title>
+  <link rel="icon" href="../difc-logo.png" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', serif; background-color: #f4faff; color: #1a1a1a; }
+
+    nav { background-color: #1a7abf; padding: 14px 40px; display: flex; justify-content: space-between; align-items: center; }
+    nav .logo { color: #fff; font-size: 1.2rem; font-weight: bold; letter-spacing: 1px; }
+    nav a { color: #cce8fa; text-decoration: none; font-size: 0.95rem; font-family: sans-serif; }
+    nav a:hover { color: #fff; }
+
+    .page-hero { background-color: #3daef5; padding: 56px 40px; text-align: center; }
+    .page-hero h1 { font-size: 2.4rem; color: #fff; margin-bottom: 8px; }
+    .page-hero p { font-size: 1rem; color: rgba(255,255,255,0.85); font-family: sans-serif; }
+
+    .section { max-width: 860px; margin: 64px auto; padding: 0 40px; }
+    .section h2 { font-size: 1.9rem; color: #1a7abf; margin-bottom: 20px; border-bottom: 3px solid #90caf9; padding-bottom: 10px; }
+    .section p { font-size: 1.05rem; line-height: 1.8; color: #333; }
+
+    /* HOW IT WORKS STEPS */
+    .steps { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+    .step { background: #fff; border: 2px solid #90caf9; border-radius: 14px; padding: 24px 28px; display: flex; align-items: flex-start; gap: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .step-number { background-color: #1a7abf; color: #fff; font-size: 1.1rem; font-weight: bold; font-family: sans-serif; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step p { font-size: 1rem; line-height: 1.7; color: #333; margin: 0; }
+
+    /* GIVING TREE */
+    .giving-tree-wrap { max-width: 900px; margin: 0 auto; padding: 64px 40px; }
+    .giving-tree-wrap > h2 { font-size: 1.9rem; color: #1a7abf; margin-bottom: 12px; border-bottom: 3px solid #90caf9; padding-bottom: 10px; }
+    .giving-intro { font-size: 1.0rem; line-height: 1.8; color: #444; text-align: center; margin-bottom: 40px; font-family: sans-serif; }
+
+    .tree-outer { display: flex; flex-direction: column; align-items: center; margin-bottom: 40px; }
+    .xmas-tree { position: relative; width: 380px; height: 475px; flex-shrink: 0; }
+    .tree-star { position: absolute; top: -6px; left: 50%; transform: translateX(-50%); font-size: 2.2rem; color: #f9a825; text-shadow: 0 0 12px rgba(249,168,37,0.7); z-index: 5; line-height: 1; cursor: pointer; }
+    .tree-star:hover { transform: translateX(-50%) scale(1.2); text-shadow: 0 0 20px rgba(249,168,37,1); }
+    .tree-star.active { text-shadow: 0 0 20px rgba(249,168,37,1); }
+    .tree-layer { position: absolute; left: 50%; transform: translateX(-50%); clip-path: polygon(50% 0%, 0% 100%, 100% 100%); }
+    .tree-l1 { width: 170px; height: 115px; top: 18px; background: #2a7a2a; }
+    .tree-l2 { width: 258px; height: 138px; top: 103px; background: #358a35; }
+    .tree-l3 { width: 346px; height: 160px; top: 210px; background: #2a7a2a; }
+    .tree-trunk { position: absolute; width: 52px; height: 68px; top: 393px; left: 50%; transform: translateX(-50%); background: #6b3a1f; border-radius: 2px; }
+    .tree-base { position: absolute; width: 104px; height: 14px; top: 458px; left: 50%; transform: translateX(-50%); background: #4a2810; border-radius: 3px; }
+
+    .ornament { position: absolute; width: 50px; height: 50px; border-radius: 50%; border: 3px solid rgba(255,255,255,0.9); background: rgba(255,255,255,0.95); font-size: 1.3rem; cursor: pointer; display: flex; align-items: center; justify-content: center; box-shadow: 0 2px 10px rgba(0,0,0,0.25); transform: translate(-50%, -50%); z-index: 10; transition: transform 0.18s, box-shadow 0.18s, background 0.18s; line-height: 1; }
+    .ornament:hover { transform: translate(-50%, -50%) scale(1.2); box-shadow: 0 5px 18px rgba(0,0,0,0.3); }
+    .ornament.active { background: #fff9c4; border-color: #f9a825; transform: translate(-50%, -50%) scale(1.12); }
+    .ornament[data-group="toys"]        { top: 75px;  left: 50%; }
+    .ornament[data-group="baby"]        { top: 162px; left: 26%; }
+    .ornament[data-group="creative"]    { top: 162px; left: 74%; }
+    .ornament[data-group="electronics"] { top: 255px; left: 20%; }
+    .ornament[data-group="beauty"]      { top: 255px; left: 50%; }
+    .ornament[data-group="spa"]         { top: 255px; left: 80%; }
+    .ornament[data-group="hygiene"]     { top: 338px; left: 25%; }
+    .ornament[data-group="clothing"]    { top: 338px; left: 50%; }
+    .ornament[data-group="donate"]      { top: 338px; left: 75%; background: rgba(255,245,200,0.95); border-color: #f9a825; font-size: 1.1rem; font-weight: bold; color: #b8860b; }
+    .ornament[data-group="donate"]:hover { background: #fff9c4; }
+    .ornament[data-group="donate"].active { background: #fff3b0; border-color: #e68a00; }
+    .tree-hint { font-family: sans-serif; font-size: 0.82rem; color: #999; margin-top: 10px; }
+
+    .sort-bar { display: flex; align-items: center; gap: 8px; }
+    .sort-label { font-family: sans-serif; font-size: 0.8rem; color: #888; }
+    .sort-select { font-family: sans-serif; font-size: 0.82rem; border: 1px solid #90caf9; border-radius: 6px; padding: 4px 8px; background: #fff; color: #333; cursor: pointer; }
+
+    .donate-tile { background: linear-gradient(135deg, #fff9e6, #fff3b0); border: 2px solid #f9a825; border-radius: 12px; padding: 28px 24px; text-align: center; max-width: 480px; margin: 0 auto; }
+    .donate-tile h3 { font-size: 1.2rem; color: #b8860b; margin-bottom: 12px; }
+    .donate-tile p { font-size: 0.95rem; color: #555; font-family: sans-serif; line-height: 1.7; margin-bottom: 20px; }
+    .donate-tile .donate-btn { background: #e68a00; display: inline-block; width: auto; padding: 12px 32px; border-radius: 50px; }
+    .donate-tile .donate-btn:hover { background: #c47700; }
+
+    .gift-panel { background: #f4faff; border: 2px solid #90caf9; border-radius: 16px; padding: 32px; min-height: 110px; }
+    .gift-placeholder { display: flex; align-items: center; justify-content: center; min-height: 80px; color: #aaa; font-family: sans-serif; font-style: italic; }
+    .gift-panel-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+    #gift-panel-title { font-size: 1.35rem; font-weight: bold; color: #1a7abf; font-family: Georgia, serif; }
+    .close-panel { background: none; border: none; font-size: 1.1rem; color: #aaa; cursor: pointer; padding: 4px 8px; }
+    .close-panel:hover { color: #333; }
+
+    .gift-tags-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 18px; }
+    .gift-tag { background: #fff; border: 2px solid #90caf9; border-radius: 10px; padding: 18px 16px 14px; display: flex; flex-direction: column; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: transform 0.15s, box-shadow 0.15s; }
+    .gift-tag:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.1); }
+    .gift-tag.fully-funded { border-color: #a5d6a7; background: #f1f8f1; opacity: 0.8; }
+    .gift-tag::before { content: ''; display: block; width: 14px; height: 14px; border-radius: 50%; border: 2px solid #90caf9; margin: 0 auto 12px; }
+    .gift-tag.fully-funded::before { border-color: #81c784; }
+    .tag-img { width: 100%; aspect-ratio: 1/1; object-fit: contain; border-radius: 8px; margin-bottom: 10px; background: #f4faff; }
+    .tag-name { font-size: 0.93rem; font-weight: bold; color: #0d47a1; margin-bottom: 5px; line-height: 1.3; }
+    .tag-desc { font-size: 0.8rem; color: #666; font-family: sans-serif; line-height: 1.5; flex: 1; margin-bottom: 10px; }
+    .tag-price { font-size: 1.1rem; font-weight: bold; color: #1a7abf; margin-bottom: 1px; }
+    .tag-price-note { font-size: 0.7rem; color: #aaa; font-family: sans-serif; margin-bottom: 10px; }
+    .tag-qty { font-size: 0.75rem; font-family: sans-serif; color: #555; margin-bottom: 12px; display: flex; align-items: center; gap: 6px; }
+    .qty-bar { flex: 1; height: 5px; background: #e3f2fd; border-radius: 3px; overflow: hidden; }
+    .qty-fill { height: 100%; background: #1a7abf; border-radius: 3px; }
+    .qty-fill.full { background: #4caf50; }
+    .donate-btn { display: block; width: 100%; background: #1a7abf; color: #fff; font-family: sans-serif; font-size: 0.85rem; font-weight: bold; text-align: center; padding: 10px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
+    .donate-btn:hover { background: #0f5a99; }
+    .donate-btn.contact { background: #546e7a; }
+    .donate-btn.contact:hover { background: #37474f; }
+    .funded-badge { display: block; text-align: center; color: #388e3c; font-family: sans-serif; font-size: 0.88rem; font-weight: bold; padding: 10px; }
+    .tree-updated { text-align: center; font-family: sans-serif; font-size: 0.75rem; color: #bbb; margin-top: 16px; }
+
+    .back-btn { display: inline-block; background-color: #1a7abf; color: #fff; font-size: 1rem; font-family: sans-serif; font-weight: bold; padding: 14px 36px; border-radius: 50px; text-decoration: none; letter-spacing: 0.5px; transition: background-color 0.2s; }
+    .back-btn:hover { background-color: #0f5a99; }
+    .back-wrap { text-align: center; padding: 0 40px 72px; }
+
+    footer { background-color: #1a7abf; color: #cce8fa; text-align: center; padding: 24px 40px; font-size: 0.85rem; font-family: sans-serif; margin-top: 80px; }
+
+    @media (max-width: 440px) { .xmas-tree { transform: scale(0.82); transform-origin: top center; } }
+    @media (max-width: 600px) { nav { padding: 14px 20px; } .section { padding: 0 20px; } .giving-tree-wrap { padding: 40px 20px; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Skate For a Cause 2026</div>
+    <a href="index.html">&larr; Back to Event</a>
+  </nav>
+
+  <div class="page-hero">
+    <h1>🎄 Wish Tree</h1>
+    <p>Supporting Seattle Children's Hospital</p>
+  </div>
+
+  <!-- HOW IT WORKS -->
+  <div class="section">
+    <h2>How the Wish Tree Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <p>At the event, you'll find a <strong>Christmas tree decorated with gift cards</strong>. Each card features a specific item that Seattle Children's Hospital is in need of, along with an image, description, and price tag.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <p><strong>Pick a card</strong> from the tree that speaks to you and bring it to one of our volunteers.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <p><strong>Purchase the tag</strong> at the listed price. We'll take care of buying the item and delivering it directly to Seattle Children's Hospital on your behalf.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIRTUAL TREE -->
+  <div class="giving-tree-wrap">
+    <h2>🎄 Virtual Wish Tree</h2>
+    <p class="giving-intro">Can't make it to the event? Click an ornament to browse gifts for Seattle Children's Hospital patients. Each tag is an item they need — donate via Venmo and we'll purchase and deliver it on your behalf.</p>
+
+    <div class="tree-outer">
+      <div class="xmas-tree" id="xmas-tree">
+        <button class="tree-star" data-group="all" title="Browse All Gifts">★</button>
+        <div class="tree-layer tree-l1"></div>
+        <div class="tree-layer tree-l2"></div>
+        <div class="tree-layer tree-l3"></div>
+        <div class="tree-trunk"></div>
+        <div class="tree-base"></div>
+        <button class="ornament" data-group="toys"        title="Toys & Games">🧸</button>
+        <button class="ornament" data-group="baby"        title="Baby & Infant">👶</button>
+        <button class="ornament" data-group="creative"    title="Arts & Creative">🎨</button>
+        <button class="ornament" data-group="electronics" title="Electronics & Gaming">🎧</button>
+        <button class="ornament" data-group="beauty"      title="Beauty & Wellness">💄</button>
+        <button class="ornament" data-group="spa"         title="Spa & Gifts">🧖</button>
+        <button class="ornament" data-group="hygiene"     title="Hygiene & Essentials">🧴</button>
+        <button class="ornament" data-group="clothing"    title="Clothing & Comfort">👕</button>
+        <button class="ornament" data-group="donate"      title="Open Donation">$</button>
+      </div>
+      <p class="tree-hint">↑ Click ★ for all gifts, or an ornament to browse by category</p>
+    </div>
+
+    <div class="gift-panel" id="gift-panel">
+      <div class="gift-placeholder" id="gift-placeholder">Browse gifts by clicking an ornament on the tree above</div>
+      <div id="gift-panel-content" style="display:none">
+        <div class="gift-panel-header">
+          <span id="gift-panel-title"></span>
+          <div class="sort-bar">
+            <span class="sort-label" id="sort-label" style="display:none">Sort:</span>
+            <select class="sort-select" id="gift-sort" style="display:none" onchange="applySort()">
+              <option value="default">Default</option>
+              <option value="needed">Most Needed</option>
+              <option value="price-asc">Price ↑</option>
+              <option value="price-desc">Price ↓</option>
+            </select>
+            <button class="close-panel" onclick="closePanel()">✕</button>
+          </div>
+        </div>
+        <div class="gift-tags-grid" id="gift-tags-grid"></div>
+      </div>
+    </div>
+    <p class="tree-updated" id="tree-updated"></p>
+  </div>
+
+  <div class="back-wrap">
+    <a class="back-btn" href="index.html">← Back to Skate For a Cause 2026</a>
+  </div>
+
+  <footer>
+    &copy; 2026 Doing It For a Cause &mdash; All proceeds go directly to our charity partners.
+  </footer>
+
+  <script>
+    let treeData = null;
+    let currentGroupId = null;
+    let currentItems = [];
+
+    async function loadTreeData() {
+      try {
+        const res = await fetch('data.json?v=' + Date.now());
+        treeData = await res.json();
+        const d = new Date(treeData.lastUpdated);
+        document.getElementById('tree-updated').textContent =
+          'Wish list last synced: ' + d.toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+      } catch(e) {
+        console.warn('Could not load data.json', e);
+      }
+    }
+
+    function venmoLinks(item, customAmount) {
+      const user   = treeData.venmoUser || 'doingitforacause';
+      const amount = customAmount != null ? customAmount : (item.price ? item.price.toFixed(2) : '');
+      const note   = encodeURIComponent("Seattle Children's Hospital – " + item.name + ": " + item.desc);
+      const params = `txn=pay${amount ? '&amount=' + amount : ''}&note=${note}`;
+      return {
+        app: `venmo://paycharge?${params}&recipients=${user}`,
+        web: `https://venmo.com/u/${user}?${params}`
+      };
+    }
+
+    function handleVenmo(el, e) {
+      e.preventDefault();
+      const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+      if (!isMobile) {
+        window.open(el.dataset.web, '_blank', 'noopener');
+        return;
+      }
+      const fallback = setTimeout(() => window.open(el.dataset.web, '_blank', 'noopener'), 1500);
+      const cancel = () => {
+        clearTimeout(fallback);
+        document.removeEventListener('visibilitychange', onVisibility);
+        window.removeEventListener('blur', cancel);
+      };
+      const onVisibility = () => { if (document.hidden) cancel(); };
+      document.addEventListener('visibilitychange', onVisibility);
+      window.addEventListener('blur', cancel);
+      window.location = el.dataset.app;
+    }
+
+    function buildTagEl(item) {
+      const avail = Math.max(0, item.needed - item.claimed);
+      const funded = avail <= 0;
+      const pct = item.needed > 0 ? Math.min(100, (item.claimed / item.needed) * 100) : 0;
+
+      const priceHtml = item.price != null
+        ? `<div class="tag-price">$${item.price.toFixed(2)}</div><div class="tag-price-note">est. price incl. tax</div>`
+        : `<div class="tag-price" style="font-size:0.88rem;color:#999;">Price TBD</div><div class="tag-price-note">contact us for details</div>`;
+
+      let btnHtml;
+      if (funded) {
+        btnHtml = `<span class="funded-badge">🎉 Fully Funded — Thank you!</span>`;
+      } else if (item.price != null) {
+        const links = venmoLinks(item);
+        btnHtml = `<a class="donate-btn" href="${links.web}" data-app="${links.app}" data-web="${links.web}" onclick="handleVenmo(this,event)" rel="noopener">Donate via Venmo →</a>`;
+      } else {
+        btnHtml = `<a class="donate-btn contact" href="mailto:info@doingitforacause.org?subject=${encodeURIComponent('Gift inquiry: ' + item.name)}">Contact Us for Pricing</a>`;
+      }
+
+      const imgHtml = item.image
+        ? `<img class="tag-img" src="${item.image}" alt="${item.name}" />`
+        : '';
+
+      const tag = document.createElement('div');
+      tag.className = 'gift-tag' + (funded ? ' fully-funded' : '');
+      tag.innerHTML = `
+        ${imgHtml}
+        <div class="tag-name">${item.name}</div>
+        <div class="tag-desc">${item.desc}</div>
+        ${priceHtml}
+        <div class="tag-qty">
+          <span>${funded ? 'Fully funded' : avail + ' of ' + item.needed + ' still needed'}</span>
+          <div class="qty-bar"><div class="qty-fill${funded ? ' full' : ''}" style="width:${pct}%"></div></div>
+        </div>
+        ${btnHtml}
+      `;
+      return tag;
+    }
+
+    function sortItems(items, sortVal) {
+      const sorted = [...items];
+      if (sortVal === 'needed') {
+        sorted.sort((a, b) => {
+          const ra = (a.needed - a.claimed) / (a.needed || 1);
+          const rb = (b.needed - b.claimed) / (b.needed || 1);
+          return rb - ra;
+        });
+      } else if (sortVal === 'price-asc') {
+        sorted.sort((a, b) => {
+          if (a.price == null && b.price == null) return 0;
+          if (a.price == null) return 1;
+          if (b.price == null) return -1;
+          return a.price - b.price;
+        });
+      } else if (sortVal === 'price-desc') {
+        sorted.sort((a, b) => {
+          if (a.price == null && b.price == null) return 0;
+          if (a.price == null) return 1;
+          if (b.price == null) return -1;
+          return b.price - a.price;
+        });
+      }
+      return sorted;
+    }
+
+    function renderGrid(items) {
+      const grid = document.getElementById('gift-tags-grid');
+      grid.innerHTML = '';
+      const sortVal = document.getElementById('gift-sort').value;
+      sortItems(items, sortVal).forEach(item => grid.appendChild(buildTagEl(item)));
+    }
+
+    function applySort() { renderGrid(currentItems); }
+
+    function renderPanel(groupId) {
+      if (!treeData) return;
+      currentGroupId = groupId;
+
+      document.getElementById('gift-placeholder').style.display = 'none';
+      document.getElementById('gift-panel-content').style.display = 'block';
+
+      const sortEl = document.getElementById('gift-sort');
+      const sortLabel = document.getElementById('sort-label');
+      const grid = document.getElementById('gift-tags-grid');
+
+      if (groupId === 'donate') {
+        document.getElementById('gift-panel-title').textContent = '$ Open Donation';
+        sortEl.style.display = 'none';
+        sortLabel.style.display = 'none';
+        grid.innerHTML = '';
+        const user = treeData.venmoUser || 'doingitforacause';
+        const note = encodeURIComponent("Open donation for Seattle Children's Hospital");
+        const appUrl = `venmo://paycharge?txn=pay&recipients=${user}&note=${note}`;
+        const webUrl = `https://venmo.com/u/${user}?txn=pay&note=${note}`;
+        const tile = document.createElement('div');
+        tile.className = 'donate-tile';
+        tile.innerHTML = `
+          <h3>💵 Donate Any Amount</h3>
+          <p>Not sure what to pick? Donate any amount you'd like — we'll choose the perfect item from Seattle Children's Hospital's wish list and deliver it on your behalf.</p>
+          <a class="donate-btn" href="${webUrl}" data-app="${appUrl}" data-web="${webUrl}" onclick="handleVenmo(this,event)" rel="noopener">Donate via Venmo →</a>
+        `;
+        grid.appendChild(tile);
+        currentItems = [];
+        return;
+      }
+
+      const isAll = groupId === 'all';
+      sortEl.style.display = isAll ? 'inline-block' : 'none';
+      sortLabel.style.display = isAll ? 'inline' : 'none';
+      if (isAll) sortEl.value = 'needed';
+
+      if (isAll) {
+        document.getElementById('gift-panel-title').textContent = '★  All Gifts';
+        currentItems = treeData.groups.flatMap(g => g.items);
+      } else {
+        const group = treeData.groups.find(g => g.id === groupId);
+        if (!group) return;
+        document.getElementById('gift-panel-title').textContent = group.icon + '  ' + group.name;
+        currentItems = group.items;
+      }
+
+      renderGrid(currentItems);
+    }
+
+    function closePanel() {
+      document.getElementById('gift-placeholder').style.display = 'flex';
+      document.getElementById('gift-panel-content').style.display = 'none';
+      document.querySelectorAll('.ornament, .tree-star').forEach(o => o.classList.remove('active'));
+      currentGroupId = null;
+      currentItems = [];
+    }
+
+    document.querySelectorAll('.ornament, .tree-star').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const groupId = btn.dataset.group;
+        const wasActive = btn.classList.contains('active');
+        document.querySelectorAll('.ornament, .tree-star').forEach(o => o.classList.remove('active'));
+        if (wasActive) {
+          closePanel();
+        } else {
+          btn.classList.add('active');
+          renderPanel(groupId);
+          document.getElementById('gift-panel').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }
+      });
+    });
+
+    loadTreeData();
+  </script>
+</body>
+</html>

@@ -2,6 +2,7 @@
 # Deploy Doing It For a Cause website to GoDaddy via FTP.
 # Run with: bash deploy.sh        — uploads all files
 # Run with: bash deploy.sh html   — uploads only .html files (faster)
+# Run with: bash deploy.sh data   — uploads only data.json (after mark-claimed / refresh-wishlist)
 
 LOCAL_DIR="/Users/jordantomacelli/Desktop/Doing-It-For-A-Cause-Website"
 REMOTE_ROOT="public_html"
@@ -28,6 +29,8 @@ if [ "$MODE" = "html" ]; then
   find "$LOCAL_DIR" -name "*.html" ! -path "*/node_modules/*" ! -path "*/.git/*" | sort | while read -r f; do
     upload "$f"
   done
+elif [ "$MODE" = "data" ]; then
+  upload "$LOCAL_DIR/run-for-a-cause/data.json"
 else
   find "$LOCAL_DIR" -type f ! -name "deploy.sh" ! -name ".DS_Store" ! -path "*/node_modules/*" ! -path "*/.git/*" | sort | while read -r f; do
     upload "$f"

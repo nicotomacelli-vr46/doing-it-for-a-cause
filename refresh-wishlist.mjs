@@ -35,6 +35,22 @@ function findMatch(data, amazonName) {
 
 console.log('🔄  Refreshing wish list quantities...\n');
 
+// Pull the latest data.json from the live server first so we don't overwrite
+// any claimed counts the PHP Venmo sync has written directly on the server.
+console.log('⬇️   Syncing latest data.json from server...');
+try {
+  const res = await fetch('https://doingitforacause.org/run-for-a-cause/data.json?v=' + Date.now());
+  if (res.ok) {
+    const serverData = await res.json();
+    writeFileSync(DATA_PATH, JSON.stringify(serverData, null, 2));
+    console.log('✓   Synced.\n');
+  } else {
+    console.log('⚠️   Server returned ' + res.status + ', using local copy.\n');
+  }
+} catch(e) {
+  console.log('⚠️   Could not reach server, using local copy.\n');
+}
+
 const browser = await chromium.launch({ headless: true });
 const context = await browser.newContext({
   userAgent: 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
@@ -104,4 +120,4 @@ if (notMatched.length) {
   notMatched.forEach(n => console.log(n));
 }
 console.log(`\n✅  data.json updated — ${data.lastUpdated}`);
-console.log('📤  To publish: bash deploy.sh html');
+console.log('📤  To publish: bash deploy.sh data');

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Challenge — Skate For a Cause 2026</title>
+  <link rel="icon" href="../difc-logo.png" />
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Georgia', serif; background-color: #f4faff; color: #1a1a1a; }
+
+    nav { background-color: #1a7abf; padding: 14px 40px; display: flex; justify-content: space-between; align-items: center; }
+    nav .logo { color: #fff; font-size: 1.2rem; font-weight: bold; letter-spacing: 1px; }
+    nav a { color: #cce8fa; text-decoration: none; font-size: 0.95rem; font-family: sans-serif; }
+    nav a:hover { color: #fff; }
+
+    .page-hero { background-color: #3daef5; padding: 56px 40px; text-align: center; }
+    .page-hero h1 { font-size: 2.4rem; color: #fff; margin-bottom: 8px; }
+    .page-hero p { font-size: 1rem; color: rgba(255,255,255,0.85); font-family: sans-serif; }
+
+    .section { max-width: 860px; margin: 64px auto; padding: 0 40px; }
+    .section h2 { font-size: 1.9rem; color: #1a7abf; margin-bottom: 20px; border-bottom: 3px solid #90caf9; padding-bottom: 10px; }
+    .section > p { font-size: 1rem; color: #444; font-family: sans-serif; line-height: 1.7; margin-bottom: 8px; }
+
+    .steps { display: flex; flex-direction: column; gap: 16px; margin-top: 28px; }
+    .challenge-steps { margin: 24px 0; }
+    .step { background: #fff; border: 2px solid #90caf9; border-radius: 14px; padding: 24px 28px; display: flex; align-items: flex-start; gap: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.05); }
+    .step-number { background-color: #1a7abf; color: #fff; font-size: 1.1rem; font-weight: bold; font-family: sans-serif; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .step p { font-size: 1rem; line-height: 1.7; color: #333; margin: 0; }
+
+    .points-grid { display: grid; grid-template-columns: auto 1fr; gap: 0; margin: 24px 0; border: 2px solid #90caf9; border-radius: 12px; overflow: hidden; font-family: sans-serif; }
+    .pts-row { display: contents; }
+    .pts-row > * { padding: 12px 18px; border-bottom: 1px solid #e3f2fd; }
+    .pts-row:last-child > * { border-bottom: none; }
+    .pts-row:nth-child(even) > * { background: #f4faff; }
+    .pts-badge { display: inline-block; background: #1a7abf; color: #fff; font-weight: bold; font-size: 0.85rem; padding: 3px 12px; border-radius: 20px; white-space: nowrap; }
+    .pts-items { font-size: 0.88rem; color: #444; line-height: 1.6; }
+
+    .challenge-prize { background: linear-gradient(135deg, #fff9e6, #fff3b0); border: 2px solid #f9a825; border-radius: 14px; padding: 24px 28px; margin: 24px 0; }
+    .challenge-prize h3 { font-size: 1.1rem; color: #b8860b; margin-bottom: 8px; font-family: sans-serif; }
+    .challenge-prize p { font-size: 0.95rem; color: #664d00; font-family: sans-serif; line-height: 1.6; }
+
+    .challenge-register { background: #e8f5e9; border: 2px solid #a5d6a7; border-radius: 14px; padding: 24px 28px; text-align: center; margin-bottom: 8px; }
+    .challenge-register p { font-size: 1rem; color: #2e7d32; font-family: sans-serif; line-height: 1.7; margin: 0; }
+    .challenge-register a { color: #1b5e20; font-weight: bold; }
+
+    .back-btn { display: inline-block; background-color: #1a7abf; color: #fff; font-size: 1rem; font-family: sans-serif; font-weight: bold; padding: 14px 36px; border-radius: 50px; text-decoration: none; letter-spacing: 0.5px; transition: background-color 0.2s; }
+    .back-btn:hover { background-color: #0f5a99; }
+    .back-wrap { text-align: center; padding: 0 40px 72px; }
+
+    footer { background-color: #1a7abf; color: #cce8fa; text-align: center; padding: 24px 40px; font-size: 0.85rem; font-family: sans-serif; }
+
+    @media (max-width: 600px) { nav { padding: 14px 20px; } .section { padding: 0 20px; } .points-grid { grid-template-columns: 1fr; } .pts-badge { display: block; margin-bottom: 6px; } }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Skate For a Cause 2026</div>
+    <a href="index.html">&larr; Back to Event</a>
+  </nav>
+
+  <div class="page-hero">
+    <h1>🏆 Community Challenge</h1>
+    <p>Compete for a cause — teams &amp; clubs welcome</p>
+  </div>
+
+  <div class="section">
+    <h2>How It Works</h2>
+    <p>Sports teams, clubs, and community organizations — this one's for you. Compete to collect the most points by bringing donated items to the event. The team with the highest score wins the grand prize!</p>
+
+    <div class="steps challenge-steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <p><strong>Collect items</strong> before or at the event. Use the point system below — higher-need items are worth more points.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <p><strong>Send your team reps</strong> to Skate For a Cause on December 12, 2026 at Lynnwood Ice Center with your donations.</p>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <p><strong>The organization with the most points wins!</strong> Points are tallied on-site at the event.</p>
+      </div>
+    </div>
+
+    <h3 style="font-size:1.1rem; color:#1a7abf; margin:28px 0 4px; font-family:sans-serif; font-weight:bold;">Point System</h3>
+    <div class="points-grid">
+      <div class="pts-row">
+        <div><span class="pts-badge">2 pts</span></div>
+        <div class="pts-items">Canned vegetables, canned fruit, canned soups, canned beans, tomato sauce, baby food, stuffing mix</div>
+      </div>
+      <div class="pts-row">
+        <div><span class="pts-badge">3 pts</span></div>
+        <div class="pts-items">Pasta, dried beans, lentils, canned tuna or chicken, oats, flour, spices &amp; seasonings</div>
+      </div>
+      <div class="pts-row">
+        <div><span class="pts-badge">5 pts</span></div>
+        <div class="pts-items">Ramen (12-pack), peanut butter, cooking oil, cereal, gluten-free pasta, cultural cooking ingredients</div>
+      </div>
+      <div class="pts-row">
+        <div><span class="pts-badge">10 pts</span></div>
+        <div class="pts-items">Rice, feminine products, toilet paper (6+ rolls), laundry detergent, baby wipes (multi-pack)</div>
+      </div>
+      <div class="pts-row">
+        <div><span class="pts-badge">20 pts</span></div>
+        <div class="pts-items">Diapers (20+ count), infant formula, pet food</div>
+      </div>
+    </div>
+
+    <div class="challenge-prize">
+      <h3>🏅 Grand Prize</h3>
+      <p>The winning organization takes home a <strong>$50 pizza party</strong> for your team — or, if you prefer, a <strong>$50 donation made directly to your organization</strong>. Your choice!</p>
+    </div>
+
+    <div class="challenge-register">
+      <p>Ready to compete? Register your team by emailing us at<br><a href="mailto:info@doingitforacause.org?subject=Community%20Challenge%20Registration">info@doingitforacause.org</a></p>
+    </div>
+  </div>
+
+  <div class="back-wrap">
+    <a class="back-btn" href="index.html">← Back to Skate For a Cause 2026</a>
+  </div>
+
+  <footer>
+    &copy; 2026 Doing It For a Cause &mdash; All proceeds go directly to our charity partners.
+  </footer>
+
+</body>
+</html>
